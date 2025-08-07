@@ -1,24 +1,25 @@
 #include <stdio.h>
 
 
-void func(int *arr)
+void func(int *p, int n)
 {
-    for(int i=0;i<3;i++)
+    for(int i=0;i<n;i++)
     {
-        *(arr + i) = *(arr + i) + 1;
-        printf("%d ",*(arr+i));
+        printf("%d ",*(p+i)+1);
     }
-    
-    
 }
 
-int main() 
+int main()
 {
+    int arr[]={10,20,30};
+    int n = sizeof(arr)/sizeof(arr[0]);
     
-    int arr[3]={10,20,30};
     
-    func(arr);
-
-    
-    return 0;
+    func(arr,n);
 }
+        
+        
+     
+        
+       
+
